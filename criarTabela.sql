@@ -15,20 +15,7 @@ CREATE TABLE  tb_Produtos(
 	vlProduto DECIMAL(6,2) --valores decimais em que a 1ª parte é a qtd de nº e a 2ª parte é a qtd de vírgula. 
 );
 
------------------------------------------------------------------------------------
---Inserção dos valores na tabela produto
------------------------------------------------------------------------------------
 
-INSERT INTO tb_Produtos VALUES ('Caneta', 1.20);
-INSERT INTO tb_Produtos VALUES ('Lápis', 1.00);
-INSERT INTO tb_Produtos VALUES ('Caderno', 21.25);
-INSERT INTO tb_Produtos VALUES ('Borracha', 0.75);
-INSERT INTO tb_Produtos VALUES ('Régua', 2.50);
-INSERT INTO tb_Produtos VALUES ('Lapiseira',7.50);
-INSERT INTO tb_Produtos VALUES ('Tinta', 3.40);
-INSERT INTO tb_Produtos VALUES ('Estojo', 13.75);
-INSERT INTO tb_Produtos VALUES ('Pasta', 2.50);
-INSERT INTO tb_Produtos VALUES ('Mochila', 103.25);
 
 -----------------------------------------------------------------------------------
 --Criar uma tabela para inserir os clientes da empresa
