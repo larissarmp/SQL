@@ -53,3 +53,24 @@ ALTER TABLE tb_vendas
 ADD CONSTRAINT FK_Produto_Vendas --para nomear o nome utiliza-se a chave que está saindo e a coluna que está 
 FOREIGN KEY (codProduto) --qual vai ser a coluna que estará referenciando a outra tabela
 REFERENCES tb_Produtos (codProduto)--onde esta fazendo referência 1º -> tabela 2º -> coluna
+
+-------------------------------------------------------------------------------------
+--Remover a tabela de vendas
+-------------------------------------------------------------------------------------
+
+DROP TABLE tb_Vendas
+
+--Relacionar o produto a vendas
+
+CREATE TABLE  tb_Vendas(
+	codVenda INT PRIMARY KEY IDENTITY(1,1),
+	codCliente INT NOT NULL FOREIGN KEY REFERENCES tb_Clientes (codCliente),
+	dtVenda DATETIME NOT NULL,
+);
+
+CREATE TABLE tb_ProdutoVenda(
+	codProdutoVenda INT PRIMARY KEY IDENTITY(1,1),
+	codVenda INT FOREIGN KEY REFERENCES tb_Vendas (codVenda) NOT NULL,
+	codProduto INT FOREIGN KEY REFERENCES tb_Produtos (codProduto) NOT NULL,
+	qtdProduto INT NOT NULL, --nessa tabela os preços seram fixos
+);
