@@ -2,7 +2,7 @@
 @author: Larissa
 
 
---Cria uma função para te retornar determinados dados
+--Cria uma função para te retornar determinados dados(como se fosse um select)
 
 CREATE PROCEDURE sp_totalVendasProdutosCliente(
 	@codCliente INT
