@@ -1,3 +1,15 @@
+-- INICIAR A TRANSAÇÃO
+BEGIN TRAN;
+
+CREATE TABLE #tmp_Estados(
+	codEstado INT IDENTITY(1,1),
+	nmEstado VARCHAR(30),
+	nmSigla	 VARCHAR(2)
+);
+/*IF OBJECT_ID('tb_Estados... #step_Estados') IS NOT NULL
+DROP TABLE #tmp_Estados;*/
+--Inserir os dados dos estados na tabela temporaria
+INSERT INTO #tmp_Estados(nmEstado)
 SELECT DISTINCT nmEstado FROM tb_Clientes ORDER BY nmEstado;
 -- update na sigla
 
